@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular_100_days';
+  name ="John Doe";
+  user = {
+    name : 'Hau Pham',
+    age:24
+  }
+  inputType = "text"
+  handleClickMe= (event: any )=>{
+    console.log(event)
+    this.inputType = "password"
+  }
 }

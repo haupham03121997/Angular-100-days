@@ -1,6 +1,14 @@
 App Component 
-<app-hello>
+<!-- <app-hello>
 </app-hello>
 <p>
   <app-hi></app-hi>
-</p>
+</p> -->
+<p>Name: {{ name}}</p>
+<p>Age : {{ user.age}}</p> 
+
+<input [type]="inputType" [value]="user.age"/> // Documents Object Modal DOM
+
+<button  type="button" (click)="handleClickMe($event)">Click Me</button>
+
+<input type="text"  [ngModel] ="name" (ngModelChange)="name = $event"  />
