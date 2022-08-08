@@ -10,7 +10,7 @@ export class AppComponent {
   name ="John Doe";
   user = {
     name : 'Hau Pham',
-    age:24
+    age:16
   }
   inputType = "text"
   handleClickMe= (event: any )=>{
