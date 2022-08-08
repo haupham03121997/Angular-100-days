@@ -12,3 +12,13 @@ App Component
 <button  type="button" (click)="handleClickMe($event)">Click Me</button>
 
 <input type="text"  [ngModel] ="name" (ngModelChange)="name = $event"  />
+
+<ng-template [ngIf]="user.age >= 18" [ngIfElse]="seenIdol">
+  <p *ngIf="user.age >= 18; else seenIdol">Bạn có thể xem danh sách IDOL TOP TOP</p>
+</ng-template>
+
+<ng-template #seenIdol>
+  <p >
+    Bạn chưa đủ tuổi để xem những video của các IDOL TOP TOP nhé! Đợi thêm vài năm nữa đi~
+  </p>
+</ng-template>
