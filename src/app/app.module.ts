@@ -8,6 +8,7 @@ import { HelloComponent } from './hello/hello.component';
 import { HiComponent } from './hi/hi.component';
 import { ProcessBarComponent } from './process-bar/process-bar.component';
 import { RoomItemComponent } from './room-item/room-item.component';
+import { ToggleComponent } from './toggle/toggle.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { RoomItemComponent } from './room-item/room-item.component';
     HelloComponent,
     HiComponent,
     ProcessBarComponent,
-    RoomItemComponent
+    RoomItemComponent,
+    ToggleComponent
   ],
   imports: [
     BrowserModule,

@@ -11,7 +11,7 @@ App Component
 
 <button type="button" (click)="handleClickMe($event)">Click Me</button>
 
-<input type="text" [ngModel]="name" (ngModelChange)="name = $event" />
+<input type="text" [ngModel]="name" (ngModelChange)="name = $event" #inputElement />
 
 <ng-template [ngIf]="user.age >= 18" [ngIfElse]="seenIdol">
   <p *ngIf="user.age >= 18; else seenIdol">Bạn có thể xem danh sách IDOL TOP TOP</p>
@@ -34,6 +34,17 @@ App Component
     </div>
   </div>
   <app-process-bar [progress]="2" [progressColor]="'#9e9e9e'" [progressBackgroundColor]="'red'" ></app-process-bar>
+</div>
+<div class="container">
+  <h2>Custom Two Way Binding</h2>
+  <!-- Toggle Component laf 1 instance của component ToggleComponent -->
+  <button class="btn btn-primary" #toggleButton>Trigger Toggle</button>
+  <ng-container>
+    <app-toggle [(checked)]="isChecked" ></app-toggle>
+    <app-toggle [(checked)]="isChecked" ></app-toggle>
+    <app-toggle [(checked)]="isChecked" ></app-toggle>
+    <app-toggle [(checked)]="isChecked" ></app-toggle>
+  </ng-container>
 </div>
 
 <ng-template #hasLike>
