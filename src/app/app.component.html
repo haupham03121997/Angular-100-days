@@ -30,43 +30,10 @@ App Component
 
   <div class="grid-container">
     <div *ngFor="let item of rooms; index as i; first as isFirst" class="grid-item">
-      <div class="grid-item-content">
-        <div class="thumbnail">
-          <img src="{{ item.image }}" alt="{{ item.name }}">
-          <ng-template [ngIf]="!hasLiked" [ngIfElse]="hasLike" >
-            <div class="favorite" (click)="handleLike()">
-              <i class="fa-regular fa-heart"></i>
-            </div>
-          </ng-template>
-        </div>
-        <div class="information">
-          <div class="group">
-            <div class="title">
-              {{ item.name }}
-            </div>
-            <div class="location">
-              <span class="location__icon"> <i class="fa-solid fa-location-dot"></i></span>
-              <span class="sub__title location__title">{{ item.locationId.name }}, {{item.locationId.province}}</span>
-            </div>
-            <div class="price">
-              <span class="price__icon"> <i class="fa-solid fa-dollar-sign"></i></span>
-              <span class="price__title">{{ convertPrice(item.price || 0) }} / đêm</span>
-            </div>
-          </div>
-          <div class="elevator">
-            <div class="elevator__content">
-              <div class="elevator__icon">
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <div class="elevator__title">
-                {{ item.locationId.valueate }}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        <app-room-item [item]="item" (onLike)="receiveOnLikeFromChild($event)"></app-room-item>
     </div>
   </div>
+  <app-process-bar [progress]="2" [progressColor]="'#9e9e9e'" [progressBackgroundColor]="'red'" ></app-process-bar>
 </div>
 
 <ng-template #hasLike>

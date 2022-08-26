@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
 import { HiComponent } from './hi/hi.component';
+import { ProcessBarComponent } from './process-bar/process-bar.component';
+import { RoomItemComponent } from './room-item/room-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloComponent,
-    HiComponent
+    HiComponent,
+    ProcessBarComponent,
+    RoomItemComponent
   ],
   imports: [
     BrowserModule,

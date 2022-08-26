@@ -35,4 +35,8 @@ export class AppComponent {
     this.hasLiked = !this.hasLiked
   }
 
+  receiveOnLikeFromChild = (hasLiked: boolean) => {
+    console.log("receiveOnLikeFromChild", hasLiked)
+  }
+
 }
