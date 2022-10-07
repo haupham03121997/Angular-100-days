@@ -14,6 +14,7 @@ export class AppComponent {
   @ViewChild('toggleButton' , { static : true}) toggleButton !: ElementRef<HTMLButtonElement>;
   @ViewChild('inputElement', { static : true , read: ElementRef }) inputElement!: ElementRef<HTMLInputElement>;
 
+ counter = 0;
   isDanger : boolean = false;
   rooms: Room[] = listRooms
   hasLiked : boolean = false
